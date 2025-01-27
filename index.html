@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12b Weboldala</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dreifraktur&display=swap" rel="stylesheet">
     <style>
         body {
             background: url('Kittikat.jpg') no-repeat center center fixed;
@@ -47,18 +48,20 @@
         }
 
         .caption {
-            font-family: "Verdana", sans-serif;
+            font-family: "Dreifraktur", sans-serif;
             font-size: 1.5em;
-            color: #ff4500;
-            margin-top: 10px;
+            margin-top: 20px;
             animation: colorChange 3s infinite;
+            background-image: linear-gradient(to right, #ff4500, #ff1493, #32cd32, #007acc);
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
         @keyframes colorChange {
             0% { color: #ff4500; }
-            25% { color: #007acc; }
+            25% { color: #ff1493; }
             50% { color: #32cd32; }
-            75% { color: #ff1493; }
+            75% { color: #007acc; }
             100% { color: #ff4500; }
         }
     </style>
@@ -69,8 +72,10 @@
 
     <p>Fedezd fel, milyen lehetőségeket kínál egy modern, színes és szagos weboldal!</p>
 
-    <img src="Kittikat.jpg" alt="Tudom hol laksz :]">
-    <div class="caption">Halihó</div>
+    <img src="Kittikat.jpg" alt="Tudom, hogy merre laksz ;]">
+    
+    <!-- Szöveg a kép alatt szivárványos betűkkel -->
+    <div class="caption">Tudom, hogy merre laksz ;]</div>
 
     <div class="footer">
         <p>Készítette a 12b osztály. <a href="#">Kapcsolat</a></p>
