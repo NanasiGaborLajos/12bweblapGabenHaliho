@@ -37,6 +37,29 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .caption {
+            font-family: "Verdana", sans-serif;
+            font-size: 1.5em;
+            color: #ff4500;
+            margin-top: 10px;
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff4500; }
+            25% { color: #007acc; }
+            50% { color: #32cd32; }
+            75% { color: #ff1493; }
+            100% { color: #ff4500; }
+        }
     </style>
 </head>
 <body>
@@ -44,6 +67,9 @@
     <p>Az első weboldalunk a "Sittes Gugli" volt, de ez már egy új kezdet.</p>
 
     <p>Fedezd fel, milyen lehetőségeket kínál egy modern, színes és szagos weboldal!</p>
+
+    <img src="Kittykat.jfif" alt="Mosolygó macska">
+    <div class="caption">Halihó</div>
 
     <div class="footer">
         <p>Készítette a 12b osztály. <a href="#">Kapcsolat</a></p>
