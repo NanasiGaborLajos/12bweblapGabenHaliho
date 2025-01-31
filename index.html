@@ -100,7 +100,7 @@
 
     <img src="Kittikat.jpg" alt="Tudom, hogy merre laksz ;]">
     
-    <div class="caption">Tudom, hogy merre laksz,halihó ;]</div>
+    <div class="caption">Tudom, hogy merre laksz ;]</div>
 
     <!-- Gomb és tippek megjelenítése -->
     <button onclick="generateTip()">Generálj egy szar tippet!</button>
@@ -115,19 +115,17 @@
             const tips = [
                 "Ha nem tudsz aludni, próbálj meg hűtött pizzát enni.",
                 "Ha megakadtál a problémádban, próbálj meg táncolni egy kicsit.",
+                "Ha meg kell baszódni,akkor meg kell baszódni",
+                "Hanyas vagy te disznó?",
                 "A legjobb módja annak, hogy gyorsan végezz a házifeladattal, ha egyszerűen nem csinálod meg.",
+                "Nehéz a matek házi? Égesd el a füzetet",
                 "Ha unatkozol, próbálj meg kitalálni egy új színnevet a kékhez.",
                 "Ha valaki kérdezi, mit csinálsz, mindig válaszolj, hogy 'semmi' – még akkor is, ha éppen semmit sem csinálsz."
-                "Ha meg kell baszódni,akkor meg kell baszódni!"
-                "Nehéz a matek házi? Öld meg magad"
-                "Legyés fasz az emberekkel,ettől biztos megkedvelnek téged"
             ];
 
-            // Véletlenszerű sorrend generálása
-            const shuffledTips = tips.sort(() => Math.random() - 0.5);
-            
-            // Az első véletlenszerű tipp megjelenítése
-            const randomTip = shuffledTips[0];
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            const randomTip = tips[randomIndex];
+
             document.getElementById("tip-container").innerText = randomTip;
         }
     </script>
