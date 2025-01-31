@@ -64,6 +64,32 @@
             75% { color: #007acc; }
             100% { color: #ff4500; }
         }
+
+        .tip-container {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 80%;
+        }
+
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #ff6347;
+        }
     </style>
 </head>
 <body>
@@ -74,11 +100,31 @@
 
     <img src="Kittikat.jpg" alt="Tudom, hogy merre laksz ;]">
     
-    <!-- Szöveg a kép alatt szivárványos betűkkel -->
     <div class="caption">Tudom, hogy merre laksz ;]</div>
+
+    <!-- Gomb és tippek megjelenítése -->
+    <button onclick="generateTip()">Generálj egy szar tippet!</button>
+    <div id="tip-container" class="tip-container"></div>
 
     <div class="footer">
         <p>Készítette a 12b osztály. <a href="#">Kapcsolat</a></p>
     </div>
+
+    <script>
+        function generateTip() {
+            const tips = [
+                "Ha nem tudsz aludni, próbálj meg hűtött pizzát enni.",
+                "Ha megakadtál a problémádban, próbálj meg táncolni egy kicsit.",
+                "A legjobb módja annak, hogy gyorsan végezz a házifeladattal, ha egyszerűen nem csinálod meg.",
+                "Ha unatkozol, próbálj meg kitalálni egy új színnevet a kékhez.",
+                "Ha valaki kérdezi, mit csinálsz, mindig válaszolj, hogy 'semmi' – még akkor is, ha éppen semmit sem csinálsz."
+            ];
+
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            const randomTip = tips[randomIndex];
+
+            document.getElementById("tip-container").innerText = randomTip;
+        }
+    </script>
 </body>
 </html>
