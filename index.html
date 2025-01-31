@@ -125,9 +125,11 @@
                 "Nehéz a matek házi? Öld meg magad"
             ];
 
-            const randomIndex = Math.floor(Math.random() * tips.length);
-            const randomTip = tips[randomIndex];
-
+            // Véletlenszerű sorrend generálása
+            const shuffledTips = tips.sort(() => Math.random() - 0.5);
+            
+            // Az első véletlenszerű tipp megjelenítése
+            const randomTip = shuffledTips[0];
             document.getElementById("tip-container").innerText = randomTip;
         }
     </script>
