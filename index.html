@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+tml lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,6 +89,18 @@
         button:hover {
             background-color: #ff6347;
         }
+
+        .spinning-image {
+            margin-top: 20px;
+            width: 200px;
+            height: auto;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -106,6 +117,8 @@
     <button onclick="generateTip()">Generálj egy szar tippet!</button>
     <div id="tip-container" class="tip-container"></div>
 
+    <img src="Kittikat.png" alt="Pörgő Kittikat" class="spinning-image">
+
     <div class="footer">
         <p>Készítette a 12b osztály. <a href="#">Kapcsolat</a></p>
     </div>
@@ -113,14 +126,14 @@
     <script>
         function generateTip() {
             const tips = [
-                "Ha nem tudsz aludni, próbálj meg hűtött pizzát enni.",
-                "Ha megakadtál a problémádban, próbálj meg táncolni egy kicsit.",
+                "Legyél seggfej az emberekkel,ettől biztos megszeretnek téged.",
+                "Ha megakadtál a problémádban,öld meg azt,akivel problémád van.",
                 "Ha meg kell baszódni,akkor meg kell baszódni",
                 "Hanyas vagy te disznó?",
                 "A legjobb módja annak, hogy gyorsan végezz a házifeladattal, ha egyszerűen nem csinálod meg.",
                 "Nehéz a matek házi? Égesd el a füzetet",
-                "Ha unatkozol, próbálj meg kitalálni egy új színnevet a kékhez.",
-                "Ha valaki kérdezi, mit csinálsz, mindig válaszolj, hogy 'semmi' – még akkor is, ha éppen semmit sem csinálsz."
+                "Ha unatkozol, próbálj meg kitalálni egy új színnevet a cfvspgghrp-hez.",
+                "Ha valaki kérdezi, mit csinálsz, mindig válaszolj, hogy 'bazdmeg' – még akkor is, ha éppen semmit sem csinálsz."
             ];
 
             const randomIndex = Math.floor(Math.random() * tips.length);
