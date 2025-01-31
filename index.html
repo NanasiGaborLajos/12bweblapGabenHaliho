@@ -1,4 +1,5 @@
-tml lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,6 +102,18 @@ tml lang="en">
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
+
+        .bouncing-image {
+            margin-top: 20px;
+            width: 200px;
+            height: auto;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
     </style>
 </head>
 <body>
@@ -117,7 +130,10 @@ tml lang="en">
     <button onclick="generateTip()">Generálj egy szar tippet!</button>
     <div id="tip-container" class="tip-container"></div>
 
-    <img src="Kittikat.jpg" alt="Pörgő Kittikat" class="spinning-image">
+    <img src="Kittikat.png" alt="Pörgő Kittikat" class="spinning-image">
+    
+    <img src="Kittikat.jpg" alt="Pattogó Kittikat" class="bouncing-image">
+    <img src="Kittikat.jpg" alt="Pattogó Kittikat" class="bouncing-image">
 
     <div class="footer">
         <p>Készítette a 12b osztály. <a href="#">Kapcsolat</a></p>
@@ -126,7 +142,7 @@ tml lang="en">
     <script>
         function generateTip() {
             const tips = [
-                "Legyél seggfej az emberekkel,ettől biztos megszeretnek téged.",
+                  "Legyél seggfej az emberekkel,ettől biztos megszeretnek téged.",
                 "Ha megakadtál a problémádban,öld meg azt,akivel problémád van.",
                 "Ha meg kell baszódni,akkor meg kell baszódni",
                 "Hanyas vagy te disznó?",
